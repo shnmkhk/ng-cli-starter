@@ -1,0 +1,13 @@
+<h3>Angular 2 Password Strength Bar</h3>
+    <div>
+       <form name="myForm" novalidate>
+            <input type="password" class="form-control" id="password" name="password" placeholder="Enter password"
+                 [(ngModel)]="account.password" #password="ngModel"
+                 minlength="5" maxlength="50" required>
+            <ng2-password-strength-bar
+                [passwordToCheck]="account.password"
+                [barLabel]="barLabel"
+                [barColors]="myColors">
+            </ng2-password-strength-bar>
+        </form>
+    </div>
